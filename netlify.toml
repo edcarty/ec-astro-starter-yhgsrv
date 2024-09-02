@@ -3,7 +3,7 @@
   publish = "dist"
 
 [dev]
-  command = "astro dev"
+  command = "npm run dev"
   port = 8888
   targetPort = 4321
   publish = "dist"
@@ -11,9 +11,13 @@
   framework = "astro"
 
 [[redirects]]
-  from = "/old-url"
+  from = "/test-ssr-netlify-rewrite"
   to = "/revalidation"
   status = 200
   force = true
 
-  
+[[redirects]]
+  from = "/test-ssg-netlify-rewrite"
+  to = "/image-cdn"
+  status = 200
+  force = true
